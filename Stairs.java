@@ -84,15 +84,4 @@ public class Stairs {
 		}
 		System.out.println('|');
 	}
-	
-
-
-
-
-
-
-
-
-
-
 }
