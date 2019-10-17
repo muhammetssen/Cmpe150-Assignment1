@@ -31,12 +31,11 @@ public class Stairs {
 			int body_parts = stickmanHeight - 3; // Number of the '|' parts .   Total Height - 1(for head) - 1(for torso) - 1(for legs). 
 			int above_stairs = body_parts-current_level; // How many of '|' parts satisfy the condition for the first situation
 			int printed_body_parts = 0; // Number of  '|' parts I have printed
-			/*for (int i = 0; i < above_stairs; i++) { // Printing adequate spaces on left and the body itself. 
+			for (int i = 0; i < above_stairs; i++) { // Printing adequate spaces on left and the body itself. 
 				System.out.println(space_on_left + body_shape);
-				//printed_body_parts++; // Every line means one more '|' has printed. 
-			}*/
-			multiple_print(above_stairs, space_on_left + body_shape + "\n");
-			printed_body_parts += above_stairs;
+				printed_body_parts++; // Every line means one more '|' has printed. 
+			}
+			
 			
 			/* Printing a body part and a stair at the same line*/
 			int remained_body_parts = body_parts - printed_body_parts;
@@ -63,20 +62,18 @@ public class Stairs {
 			/* Printing without any body or leg*/
 			for (; drawing_step <=stairHeight ; drawing_step++) { //Each loop is a new line
 				
-			/*
+			
 			for (int j = stairHeight-drawing_step+1; j>0 ; j--) {
 				System.out.print("   ");
-			}*/
-			multiple_print(stairHeight-drawing_step+1, "   ");
-
+			}
+			
 			star_printer(drawing_step);
 			}
 			
-			/*
+			
 			for (int i = 0; i < current_level+2; i++) {
 				System.out.println();
-			}*/
-			multiple_print(current_level+2, "\n");
+			}
 			
 			current_level--;
 			
