@@ -13,9 +13,7 @@ public class Stairs {
 		int current_level = stairHeight; // Top stair's index is 0. At the begining, stickman is at the bottom whose index equals to stairHeight
 		for (int level = 0; level <=stairHeight; level++) { // Top To Bottom. Printing every stair of a frame.
 			String space_on_left = "";
-			for (int i = 0; i < stairHeight-current_level; i++) {
-				space_on_left +="   ";
-			}
+			space_on_left = multiplier(stairHeight-current_level, "   ");
 			
 			// Stickman's height and torso are always higher than the stairs. We don't need to adjust these according to variables. 
 			System.out.println(space_on_left + head_shape);
@@ -51,7 +49,6 @@ public class Stairs {
 				drawing_step++;
 				
 			}
-			
 			/*Printing legs and a stair*/
 			System.out.print(space_on_left + leg_shape);
 			multiple_print(current_level-drawing_step,"   ");
@@ -86,15 +83,17 @@ public class Stairs {
 	public static void star_printer(int count) {
 		System.out.print("___|");
 		multiple_print(count, "***");
-		/*for (int i = 0; i < count; i++) {
-			System.out.print("***");			
-		} */
 		System.out.println('|');
 	}
 
 	public static void multiple_print(int count, String text){
-		for(;count>0;count--){
-			System.out.print(text);
-		}
+		System.out.print(multiplier(count, text));
+	}
+	
+	public static String multiplier(int count, String text){
+		String result = "";
+		for (; count >0 ; count --) 
+			result += text;
+		return result;
 	}
 }
