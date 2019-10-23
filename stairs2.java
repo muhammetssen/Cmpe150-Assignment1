@@ -1,4 +1,4 @@
-public class Stairs {
+public class stairs2 {
 	public static void main(String[] args) {
 		//int stickmanHeight = Integer.parseInt(args[0]);
 		//int stairHeight = Integer.parseInt(args[1]);
